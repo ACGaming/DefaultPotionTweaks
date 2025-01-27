@@ -8,7 +8,6 @@ import javax.annotation.Nullable;
 import net.minecraftforge.common.ForgeVersion;
 import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
 
-import mod.acgaming.vpt.Tags;
 import mod.acgaming.vpt.VanillaPotionTweaks;
 import zone.rong.mixinbooter.IEarlyMixinLoader;
 
@@ -19,7 +18,7 @@ public class VPTLoadingPlugin implements IFMLLoadingPlugin, IEarlyMixinLoader
 {
     static
     {
-        VanillaPotionTweaks.LOGGER.info(Tags.MOD_NAME + " Core initializing...");
+        VanillaPotionTweaks.LOGGER.info(VanillaPotionTweaks.MOD_NAME + " Core initializing...");
     }
 
     @Override

@@ -7,10 +7,10 @@ import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-import mod.acgaming.vpt.Tags;
+import mod.acgaming.vpt.VanillaPotionTweaks;
 import mod.acgaming.vpt.config.VPTConfig;
 
-@Mod.EventBusSubscriber(modid = Tags.MOD_ID)
+@Mod.EventBusSubscriber(modid = VanillaPotionTweaks.MOD_ID)
 public class VPTStrengthDamageFactor
 {
     @SubscribeEvent

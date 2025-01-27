@@ -14,7 +14,10 @@ import mod.acgaming.vpt.potion.VPTMasteryPotion;
 @Mod(modid = Tags.MOD_ID, name = Tags.MOD_NAME, version = Tags.VERSION, dependencies = "required-after:mixinbooter;required-after:configanytime")
 public class VanillaPotionTweaks
 {
-    public static final Logger LOGGER = LogManager.getLogger(Tags.MOD_NAME);
+    public static final String MOD_ID = Tags.MOD_ID;
+    public static final String MOD_NAME = Tags.MOD_NAME;
+    public static final String VERSION = Tags.VERSION;
+    public static final Logger LOGGER = LogManager.getLogger(MOD_NAME);
 
     @SubscribeEvent
     public static void registerPotion(RegistryEvent.Register<Potion> event)
@@ -25,6 +28,6 @@ public class VanillaPotionTweaks
     @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
-        LOGGER.info(Tags.MOD_NAME + " initializing...");
+        LOGGER.info(MOD_NAME + " v" + VERSION + " initializing...");
     }
 }

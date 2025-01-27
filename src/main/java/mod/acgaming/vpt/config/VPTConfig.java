@@ -7,9 +7,9 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import com.cleanroommc.configanytime.ConfigAnytime;
-import mod.acgaming.vpt.Tags;
+import mod.acgaming.vpt.VanillaPotionTweaks;
 
-@Config(modid = Tags.MOD_ID, name = "VanillaPotionTweaks")
+@Config(modid = VanillaPotionTweaks.MOD_ID, name = "VanillaPotionTweaks")
 public class VPTConfig
 {
     @Config.RequiresMcRestart
@@ -66,15 +66,15 @@ public class VPTConfig
         ConfigAnytime.register(VPTConfig.class);
     }
 
-    @Mod.EventBusSubscriber(modid = Tags.MOD_ID)
+    @Mod.EventBusSubscriber(modid = VanillaPotionTweaks.MOD_ID)
     public static class EventHandler
     {
         @SubscribeEvent
         public static void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent event)
         {
-            if (event.getModID().equals(Tags.MOD_ID))
+            if (event.getModID().equals(VanillaPotionTweaks.MOD_ID))
             {
-                ConfigManager.sync(Tags.MOD_ID, Config.Type.INSTANCE);
+                ConfigManager.sync(VanillaPotionTweaks.MOD_ID, Config.Type.INSTANCE);
             }
         }
     }
