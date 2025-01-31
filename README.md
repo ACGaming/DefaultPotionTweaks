@@ -2,8 +2,8 @@
 
 ###### Changes the behavior of certain vanilla potion effects, as well as allowing greater control over their specific values
 
-[![Requires MixinBooter](https://img.shields.io/badge/Requires-MixinBooter-3498db.svg?labelColor=34495e&style=for-the-badge)](https://www.curseforge.com/minecraft/mc-mods/mixin-booter)
-[![Requires ConfigAnytime](https://img.shields.io/badge/Requires-ConfigAnytime-3498db.svg?labelColor=34495e&style=for-the-badge)](https://www.curseforge.com/minecraft/mc-mods/configanytime)
+[![Requires MixinBooter](https://img.shields.io/badge/Requires-MixinBooter-ffab00.svg?labelColor=212121&style=for-the-badge)](https://www.curseforge.com/minecraft/mc-mods/mixin-booter)
+[![Requires ConfigAnytime](https://img.shields.io/badge/Requires-ConfigAnytime-ffab00.svg?labelColor=212121&style=for-the-badge)](https://www.curseforge.com/minecraft/mc-mods/configanytime)
 
 ![Inventory status effect](effect_inv.png)
 
