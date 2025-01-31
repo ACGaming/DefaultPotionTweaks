@@ -5,6 +5,8 @@
 [![Requires MixinBooter](https://img.shields.io/badge/Requires-MixinBooter-3498db.svg?labelColor=34495e&style=for-the-badge)](https://www.curseforge.com/minecraft/mc-mods/mixin-booter)
 [![Requires ConfigAnytime](https://img.shields.io/badge/Requires-ConfigAnytime-3498db.svg?labelColor=34495e&style=for-the-badge)](https://www.curseforge.com/minecraft/mc-mods/configanytime)
 
+![Inventory status effect](effect_inv.png)
+
 * A new effect **Mastery** is added, which increases attack speed by a configurable amount
 * Haste can be tweaked to only affect mining speed, the specific percent increase is configurable
 * Strength moved from a flat damage increase to a percent damage increase, the specific percent increase is configurable
