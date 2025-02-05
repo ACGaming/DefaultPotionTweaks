@@ -1,4 +1,4 @@
-package mod.acgaming.vpt.event;
+package mod.acgaming.dpt.event;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.init.MobEffects;
@@ -7,16 +7,16 @@ import net.minecraftforge.event.entity.living.LivingDamageEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-import mod.acgaming.vpt.VanillaPotionTweaks;
-import mod.acgaming.vpt.config.VPTConfig;
+import mod.acgaming.dpt.DefaultPotionTweaks;
+import mod.acgaming.dpt.config.DPTConfig;
 
-@Mod.EventBusSubscriber(modid = VanillaPotionTweaks.MOD_ID)
-public class VPTStrengthDamageFactor
+@Mod.EventBusSubscriber(modid = DefaultPotionTweaks.MOD_ID)
+public class DPTStrengthDamageFactor
 {
     @SubscribeEvent
-    public static void vptStrengthDamageFactor(LivingDamageEvent event)
+    public static void dptStrengthDamageFactor(LivingDamageEvent event)
     {
-        if (VPTConfig.strengthDisableFlatDamage && event.getSource().getTrueSource() instanceof EntityLivingBase)
+        if (DPTConfig.strengthDisableFlatDamage && event.getSource().getTrueSource() instanceof EntityLivingBase)
         {
             EntityLivingBase attacker = (EntityLivingBase) event.getSource().getTrueSource();
             PotionEffect strength = attacker.getActivePotionEffect(MobEffects.STRENGTH);
@@ -24,7 +24,7 @@ public class VPTStrengthDamageFactor
             {
                 float damage = event.getAmount();
                 int level = strength.getAmplifier() + 1;
-                damage *= level * (float) VPTConfig.strengthAttackDamageFactor;
+                damage *= level * (float) DPTConfig.strengthAttackDamageFactor;
                 event.setAmount(damage);
             }
         }

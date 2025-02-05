@@ -1,0 +1,11 @@
+{
+  "package": "mod.acgaming.dpt.mixin",
+  "required": true,
+  "refmap": "mixins.dpt.refmap.json",
+  "target": "@env(DEFAULT)",
+  "minVersion": "0.8.5",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": ["DPTHasteAttackSpeedMixin", "DPTHasteMiningSpeedMixin", "DPTInstantDamageMixin", "DPTInstantHealthMixin", "DPTSlownessSpeedMixin", "DPTStrengthFlatDamageMixin", "DPTSwiftnessSpeedMixin"],
+  "server": [],
+  "client": []
+}

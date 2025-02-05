@@ -1,4 +1,4 @@
-package mod.acgaming.vpt.config;
+package mod.acgaming.dpt.config;
 
 import net.minecraftforge.common.config.Config;
 import net.minecraftforge.common.config.ConfigManager;
@@ -7,10 +7,10 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import com.cleanroommc.configanytime.ConfigAnytime;
-import mod.acgaming.vpt.VanillaPotionTweaks;
+import mod.acgaming.dpt.DefaultPotionTweaks;
 
-@Config(modid = VanillaPotionTweaks.MOD_ID, name = "VanillaPotionTweaks")
-public class VPTConfig
+@Config(modid = DefaultPotionTweaks.MOD_ID, name = "DefaultPotionTweaks")
+public class DPTConfig
 {
     @Config.RequiresMcRestart
     @Config.Name("Haste: Attack Speed Increase")
@@ -63,18 +63,18 @@ public class VPTConfig
 
     static
     {
-        ConfigAnytime.register(VPTConfig.class);
+        ConfigAnytime.register(DPTConfig.class);
     }
 
-    @Mod.EventBusSubscriber(modid = VanillaPotionTweaks.MOD_ID)
+    @Mod.EventBusSubscriber(modid = DefaultPotionTweaks.MOD_ID)
     public static class EventHandler
     {
         @SubscribeEvent
         public static void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent event)
         {
-            if (event.getModID().equals(VanillaPotionTweaks.MOD_ID))
+            if (event.getModID().equals(DefaultPotionTweaks.MOD_ID))
             {
-                ConfigManager.sync(VanillaPotionTweaks.MOD_ID, Config.Type.INSTANCE);
+                ConfigManager.sync(DefaultPotionTweaks.MOD_ID, Config.Type.INSTANCE);
             }
         }
     }

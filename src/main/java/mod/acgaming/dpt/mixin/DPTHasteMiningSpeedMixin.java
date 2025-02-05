@@ -1,18 +1,18 @@
-package mod.acgaming.vpt.mixin;
+package mod.acgaming.dpt.mixin;
 
 import net.minecraft.entity.player.EntityPlayer;
 
-import mod.acgaming.vpt.config.VPTConfig;
+import mod.acgaming.dpt.config.DPTConfig;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.Constant;
 import org.spongepowered.asm.mixin.injection.ModifyConstant;
 
 @Mixin(EntityPlayer.class)
-public abstract class VPTHasteMiningSpeedMixin
+public abstract class DPTHasteMiningSpeedMixin
 {
     @ModifyConstant(method = "getDigSpeed(Lnet/minecraft/block/state/IBlockState;Lnet/minecraft/util/math/BlockPos;)F", constant = @Constant(floatValue = 0.2F), remap = false)
-    private float vptHasteMiningSpeed(float constant)
+    private float dptHasteMiningSpeed(float constant)
     {
-        return (float) VPTConfig.hasteMiningSpeedFactor;
+        return (float) DPTConfig.hasteMiningSpeedFactor;
     }
 }

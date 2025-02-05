@@ -1,4 +1,4 @@
-package mod.acgaming.vpt.core;
+package mod.acgaming.dpt.core;
 
 import java.util.Collections;
 import java.util.List;
@@ -8,17 +8,17 @@ import javax.annotation.Nullable;
 import net.minecraftforge.common.ForgeVersion;
 import net.minecraftforge.fml.relauncher.IFMLLoadingPlugin;
 
-import mod.acgaming.vpt.VanillaPotionTweaks;
+import mod.acgaming.dpt.DefaultPotionTweaks;
 import zone.rong.mixinbooter.IEarlyMixinLoader;
 
-@IFMLLoadingPlugin.Name("VPTCore")
+@IFMLLoadingPlugin.Name("DPTCore")
 @IFMLLoadingPlugin.MCVersion(ForgeVersion.mcVersion)
 @IFMLLoadingPlugin.SortingIndex(Integer.MIN_VALUE)
-public class VPTLoadingPlugin implements IFMLLoadingPlugin, IEarlyMixinLoader
+public class DPTLoadingPlugin implements IFMLLoadingPlugin, IEarlyMixinLoader
 {
     static
     {
-        VanillaPotionTweaks.LOGGER.info(VanillaPotionTweaks.MOD_NAME + " Core initializing...");
+        DefaultPotionTweaks.LOGGER.info(DefaultPotionTweaks.MOD_NAME + " Core initializing...");
     }
 
     @Override
@@ -55,6 +55,6 @@ public class VPTLoadingPlugin implements IFMLLoadingPlugin, IEarlyMixinLoader
     @Override
     public List<String> getMixinConfigs()
     {
-        return Collections.singletonList("mixins.vpt.json");
+        return Collections.singletonList("mixins.dpt.json");
     }
 }

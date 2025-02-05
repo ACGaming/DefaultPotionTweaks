@@ -1,4 +1,4 @@
-## Vanilla Potion Tweaks
+## Default Potion Tweaks
 
 ###### Changes the behavior of certain vanilla potion effects, as well as allowing greater control over their specific values
 
