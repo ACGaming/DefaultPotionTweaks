@@ -52,9 +52,10 @@ public class DPTConfig
     @Config.Comment("Disables the flat damage increase when a Strength potion effect is active")
     public static boolean strengthDisableFlatDamage = true;
 
-    @Config.Name("Strength: Attack Damage Factor")
-    @Config.Comment("Sets the factor of increasing attack damage per level when a Strength potion effect is active")
-    public static double strengthAttackDamageFactor = 1.2D;
+    @Config.RequiresMcRestart
+    @Config.Name("Strength: Attack Damage Increase")
+    @Config.Comment("Sets the attack damage increase per level when a Strength potion effect is active")
+    public static double strengthAttackDamageFactor = 0.2D;
 
     @Config.RequiresMcRestart
     @Config.Name("Swiftness: Speed Increase")
